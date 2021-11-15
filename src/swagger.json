@@ -9,7 +9,7 @@
         }
     },
     "paths": {
-        "/categries": {
+        "/categories": {
             "post": {
                 "tags": ["Category"], 
                 "summary": "Criar noca categoria",
