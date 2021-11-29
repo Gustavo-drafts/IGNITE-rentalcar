@@ -1,11 +1,11 @@
-import { Category } from "../model/Category";
+import { Category } from "../entities/Category";
 
 //DTO => Dara Transfer Object
 interface ICreateCategoryDTO {
     name: string;
     description: string;
 }
-
+0
 
 interface ICategoriesRepository {
     findByName(name: string): Category;
