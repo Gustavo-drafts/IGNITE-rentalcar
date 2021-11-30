@@ -5,7 +5,7 @@
   "author": "Gustavo Trindade <gu.trindadelive@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "tsnd --inspect --transpile-only --ignore-watch node-modules --respawn src/server.ts",
+    "dev": "tsnd --respawn --ignore-watch node-modules src/server.ts",
     "typeorm": "tsnd ./node_modules/typeorm/cli"
   },
   "devDependencies": {

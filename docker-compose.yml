@@ -4,6 +4,7 @@ services:
   database:
     image: postgres
     container_name: dbcar
+    restart: always
     ports:
       - 5432:5432
     environment:
@@ -19,6 +20,7 @@ services:
   app:
     build: .
     container_name: rentalcar
+    restart: always
     ports:
       - 3333:3333
       - 9229:9229 #debug
