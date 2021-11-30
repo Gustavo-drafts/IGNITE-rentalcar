@@ -1,3 +1,5 @@
+import { inject, injectable } from "tsyringe";
+
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -5,11 +7,14 @@ interface IRequest {
     description: string;
 }
 
+@injectable()
 // classe responsável por criar categoria
 class CreateCategoryUseCase {
 
     // ICategoriesRepository - é um subtipo de 'CategoriesRepos...' e 'PostgresCateg...'
-    constructor(private categoriesRepository: ICategoriesRepository) {} // inversão de dependência
+    constructor(
+        @inject("CategoriesRepository")
+        private categoriesRepository: ICategoriesRepository) {} // inversão de dependência
 
     async execute({ description, name }: IRequest): Promise<void> {
         const categoryAlreadyExists = await this.categoriesRepository.findByName(name);
