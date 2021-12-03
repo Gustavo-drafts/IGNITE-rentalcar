@@ -11,6 +11,7 @@ class CreateCategoryController {
     async handle(req: Request, res: Response): Promise<Response> { 
         const { name, description } = req.body; // recebe a requisição
 
+        // tsyringe dependency
         const createCategoryUseCase = container.resolve(CreateCategoryUseCase);
 
         await createCategoryUseCase.execute({ name, description }); // executa o comando 
