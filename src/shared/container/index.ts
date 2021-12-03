@@ -11,4 +11,4 @@ container.registerSingleton<ICategoriesRepository>("CategoriesRepository", Categ
 
 
 
-container.registerSingleton<ISpecificationsRepository>("CategoriesRepository", SpecificationsRepository);
+container.registerSingleton<ISpecificationsRepository>("SpecificationsRepository", SpecificationsRepository);
